@@ -1,0 +1,34 @@
+/*
+Theme Name:   Twenty Seventeen Child
+Description:  Twenty Seventeen Child Theme
+Author:       Sararilfy
+Template:     twentyseventeen
+Version:      1.0.0
+*/
+/* Posted Display Widget Category Gourmet */
+.img-posted-display {
+	display: inline-block;
+	vertical-align: top;
+	width: 25%;
+}
+.date-posted-display {
+	display: block;
+}
+.anchor-posted-display {
+	display: flex;
+}
+.anchor-posted-display:hover {
+	box-shadow: none!important;
+}
+.title-posted-display {
+	display: block;
+}
+.text-posted-display {
+	display: inline-block;
+	margin: 0 2% 0 0;
+	vertical-align: top;
+	width: 73%;
+}
+.widget .img-posted-display img {
+	box-shadow: none;
+}
