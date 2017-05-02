@@ -10,6 +10,40 @@ function theme_enqueue_styles() {
 
 
 /**
+ * Google Tag Manager導入
+ */
+
+// </body>直前
+function hook_javascript_footer() {
+    /**
+    * アナリティクスにデータレイヤー変数で公開日を渡す
+    *
+    * @date 20160205
+    */
+    if ( is_singular() ) {
+    ?>
+    <script>
+      dataLayer = [{
+        'release_date': '<?php echo esc_html(get_post_time('Y年n月j日')); ?>'
+      }];
+    </script>
+    <?php
+}
+?>
+    <!-- Google Tag Manager -->
+    <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-WT69J9" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-WT69J9');</script>
+    <!-- End Google Tag Manager -->
+<?php
+}
+add_action('wp_footer', 'hook_javascript_footer');
+
+
+/**
  * AMPにGoogle タグマネージャーをインストール
  * AMPにGoogle AdSense導入
  * @Date 2016/11/03
