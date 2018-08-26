@@ -37,6 +37,9 @@ add_action('wp_footer', 'hook_javascript_footer');
  * AMPにGoogle タグマネージャーをインストール
  * AMPにGoogle AdSense導入
  * @Date 2016/11/03
+ *
+ * AMP自動広告
+ * @Date 2018/08/26
  */
 add_action( 'amp_post_template_head', 'xyz_amp_add_tag_analytics' );
 
@@ -48,6 +51,8 @@ function xyz_amp_add_tag_analytics() {
 <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
 <!-- amp-social-share -->
 <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
+<!-- amp-auto-ads -->
+<script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
 <?php
 }
 
